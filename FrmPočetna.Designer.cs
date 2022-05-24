@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.labelKreirajZahtjev = new System.Windows.Forms.Label();
+            this.dgvKorisnik = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnik)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -43,6 +45,7 @@
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(112, 451);
             this.treeView1.TabIndex = 0;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // label1
             // 
@@ -73,18 +76,28 @@
             this.labelKreirajZahtjev.Text = "Kreiraj zahtjev";
             this.labelKreirajZahtjev.Click += new System.EventHandler(this.label2_Click);
             // 
+            // dgvKorisnik
+            // 
+            this.dgvKorisnik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKorisnik.Location = new System.Drawing.Point(118, 107);
+            this.dgvKorisnik.Name = "dgvKorisnik";
+            this.dgvKorisnik.Size = new System.Drawing.Size(670, 219);
+            this.dgvKorisnik.TabIndex = 3;
+            // 
             // FrmPočetna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvKorisnik);
             this.Controls.Add(this.labelKreirajZahtjev);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.treeView1);
             this.Name = "FrmPočetna";
             this.Text = "ATECH";
             this.Load += new System.EventHandler(this.FrmPočetna_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnik)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,6 +109,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label labelKreirajZahtjev;
+        private System.Windows.Forms.DataGridView dgvKorisnik;
     }
 }
 

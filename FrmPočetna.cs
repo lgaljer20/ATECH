@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATECH.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,17 @@ namespace ATECH
 
         private void FrmPočetna_Load(object sender, EventArgs e)
         {
+            ShowKorisnik();
+        }
 
+        private void ShowKorisnik()
+        {
+            var korisnici = KorisnikRepository.DohvatiKorisnike();
+            dgvKorisnik.DataSource = korisnici;
+
+            dgvKorisnik.Columns["Ime"].DisplayIndex = 0;
+            dgvKorisnik.Columns["Prezime"].DisplayIndex = 1;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,6 +39,11 @@ namespace ATECH
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
         }
