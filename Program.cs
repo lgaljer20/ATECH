@@ -16,7 +16,7 @@ namespace ATECH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPočetna());
+            Application.Run(new FrmLogin());
         }
     }
 }
