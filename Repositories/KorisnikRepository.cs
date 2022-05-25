@@ -19,7 +19,7 @@ namespace ATECH.Repositories
         }
         public static Korisnik DohvatiKorisnika(int id)
         {
-            string sql = $"SELECT * FROM Students WHERE Id = {id}";
+            string sql = $"SELECT * FROM Korisnik WHERE Id = {id}";
             return Dohvati(sql);
         }
         

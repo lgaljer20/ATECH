@@ -34,6 +34,7 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.labelKreirajZahtjev = new System.Windows.Forms.Label();
             this.dgvKorisnik = new System.Windows.Forms.DataGridView();
+            this.labelPregledajZahtjeve = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnik)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,12 +85,25 @@
             this.dgvKorisnik.Size = new System.Drawing.Size(670, 219);
             this.dgvKorisnik.TabIndex = 3;
             // 
+            // labelPregledajZahtjeve
+            // 
+            this.labelPregledajZahtjeve.AutoSize = true;
+            this.labelPregledajZahtjeve.BackColor = System.Drawing.Color.White;
+            this.labelPregledajZahtjeve.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelPregledajZahtjeve.Location = new System.Drawing.Point(12, 125);
+            this.labelPregledajZahtjeve.Name = "labelPregledajZahtjeve";
+            this.labelPregledajZahtjeve.Size = new System.Drawing.Size(96, 15);
+            this.labelPregledajZahtjeve.TabIndex = 4;
+            this.labelPregledajZahtjeve.Text = "Pregledaj zahtjeve";
+            this.labelPregledajZahtjeve.Click += new System.EventHandler(this.labelPregledajZahtjeve_Click);
+            // 
             // FrmPočetna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelPregledajZahtjeve);
             this.Controls.Add(this.dgvKorisnik);
             this.Controls.Add(this.labelKreirajZahtjev);
             this.Controls.Add(this.label1);
@@ -110,6 +124,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label labelKreirajZahtjev;
         private System.Windows.Forms.DataGridView dgvKorisnik;
+        private System.Windows.Forms.Label labelPregledajZahtjeve;
     }
 }
 

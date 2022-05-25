@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ATECH.Models;
+using ATECH.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +13,9 @@ using System.Windows.Forms;
 namespace ATECH
 {
     public partial class FrmLogin : Form
-    {
-        string username = "nastavnik";
-        string password = "test";
+    {  
+        public static Korisnik PrijavljenKorisnik { get; set; }
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -42,7 +44,9 @@ namespace ATECH
             }
             else
             {
-                if (txtUsername.Text == username && txtPassword.Text == password)
+
+                PrijavljenKorisnik = KorisnikRepository.DohvatiKorisnika(txtUsername.Text);
+                if (PrijavljenKorisnik != null && PrijavljenKorisnik.Lozinka == txtPassword.Text)
                 {
                     FrmPočetna frmPočetna = new FrmPočetna();
                     Hide();

@@ -50,5 +50,13 @@ namespace ATECH
         {
 
         }
+
+        private void labelPregledajZahtjeve_Click(object sender, EventArgs e)
+        {
+            FrmPregledZahtjeva frmPregledajZahtjev= new FrmPregledZahtjeva();
+            Hide();
+            frmPregledajZahtjev.ShowDialog();
+            Close();
+        }
     }
 }
