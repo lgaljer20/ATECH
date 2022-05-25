@@ -121,6 +121,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="DLLs\DBLayer.dll" />
+    <None Include="Resources\ATECH.jpg" />
+    <None Include="Resources\ATECH.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

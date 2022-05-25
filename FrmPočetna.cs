@@ -27,6 +27,9 @@ namespace ATECH
             label4.Text = prezime;
             string mail = FrmLogin.PrijavljenKorisnik.Mail;
             label5.Text = mail;
+
+            pbx1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbx1.Image = Properties.Resources.ATECH;
         }
 
         
@@ -52,6 +55,11 @@ namespace ATECH
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
