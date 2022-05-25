@@ -40,7 +40,10 @@ namespace ATECH
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            FrmKreirajZahtjev frmZahtjev = new FrmKreirajZahtjev();
+            Hide();
+            frmZahtjev.ShowDialog();
+            Close();
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
