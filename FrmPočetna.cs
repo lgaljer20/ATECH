@@ -1,4 +1,5 @@
-﻿using ATECH.Repositories;
+﻿using ATECH.Models;
+using ATECH.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +21,15 @@ namespace ATECH
 
         private void FrmPočetna_Load(object sender, EventArgs e)
         {
-        
+            string ime= FrmLogin.PrijavljenKorisnik.Ime;
+            label3.Text = ime;
+            string prezime = FrmLogin.PrijavljenKorisnik.Prezime;
+            label4.Text = prezime;
+            string mail = FrmLogin.PrijavljenKorisnik.Mail;
+            label5.Text = mail;
         }
 
-
+        
         private void label2_Click(object sender, EventArgs e)
         {
             FrmKreirajZahtjev frmZahtjev = new FrmKreirajZahtjev();
@@ -43,6 +49,11 @@ namespace ATECH
             Hide();
             frmPregledajZahtjev.ShowDialog();
             Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

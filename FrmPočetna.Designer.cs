@@ -28,64 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.labelKreirajZahtjev = new System.Windows.Forms.Label();
             this.labelPregledajZahtjeve = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // treeView1
-            // 
-            this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(112, 451);
-            this.treeView1.TabIndex = 0;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(389, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Početna stranica";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // labelKreirajZahtjev
             // 
-            this.labelKreirajZahtjev.AutoSize = true;
             this.labelKreirajZahtjev.BackColor = System.Drawing.Color.White;
             this.labelKreirajZahtjev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelKreirajZahtjev.Location = new System.Drawing.Point(12, 72);
+            this.labelKreirajZahtjev.Location = new System.Drawing.Point(12, 123);
             this.labelKreirajZahtjev.Name = "labelKreirajZahtjev";
-            this.labelKreirajZahtjev.Size = new System.Drawing.Size(75, 15);
+            this.labelKreirajZahtjev.Size = new System.Drawing.Size(98, 47);
             this.labelKreirajZahtjev.TabIndex = 2;
             this.labelKreirajZahtjev.Text = "Kreiraj zahtjev";
             this.labelKreirajZahtjev.Click += new System.EventHandler(this.label2_Click);
             // 
             // labelPregledajZahtjeve
             // 
-            this.labelPregledajZahtjeve.AutoSize = true;
             this.labelPregledajZahtjeve.BackColor = System.Drawing.Color.White;
             this.labelPregledajZahtjeve.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPregledajZahtjeve.Location = new System.Drawing.Point(12, 125);
+            this.labelPregledajZahtjeve.Location = new System.Drawing.Point(12, 190);
             this.labelPregledajZahtjeve.Name = "labelPregledajZahtjeve";
-            this.labelPregledajZahtjeve.Size = new System.Drawing.Size(96, 15);
+            this.labelPregledajZahtjeve.Size = new System.Drawing.Size(98, 47);
             this.labelPregledajZahtjeve.TabIndex = 4;
             this.labelPregledajZahtjeve.Text = "Pregledaj zahtjeve";
             this.labelPregledajZahtjeve.Click += new System.EventHandler(this.labelPregledajZahtjeve_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(296, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Dobrodošli u ATECH";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(553, 425);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Acquire technical equipment, est. 2022";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 52);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(30, 52);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(90, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "label5";
             // 
             // FrmPočetna
             // 
@@ -93,10 +116,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.labelPregledajZahtjeve);
             this.Controls.Add(this.labelKreirajZahtjev);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.treeView1);
             this.Name = "FrmPočetna";
             this.Text = "ATECH";
             this.Load += new System.EventHandler(this.FrmPočetna_Load);
@@ -106,12 +132,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label labelKreirajZahtjev;
         private System.Windows.Forms.Label labelPregledajZahtjeve;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
