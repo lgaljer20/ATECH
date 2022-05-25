@@ -74,6 +74,7 @@
     <Compile Include="Models\Zahtjev.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IzvoriFinanciranjaRepository.cs" />
     <Compile Include="Repositories\KorisnikRepository.cs" />
     <EmbeddedResource Include="FrmKreirajZahtjev.resx">
       <DependentUpon>FrmKreirajZahtjev.cs</DependentUpon>

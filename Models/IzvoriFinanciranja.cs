@@ -10,5 +10,10 @@ namespace ATECH.Models
     {
         public int Id { get; set; }
         public string IzvorFinanciranja { get; set; }
+
+        public override string ToString()
+        {
+            return IzvorFinanciranja;
+        }
     }
 }
