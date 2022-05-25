@@ -102,5 +102,24 @@ namespace ATECH.Repositories
 
             return zahtjev;
         }
+
+        public static void KreirajZahtjev(string naziv, Korisnik korisnik, DateTime vrijeme, IzvoriFinanciranja izvor, string opis, string ponuditeljPrvi,
+            float cijenaBezPrvi, float cijenaPrvi, bool prvaPonuda, string ponuditeljDva, float cijenaBezDva, float cijenaDva, bool drugaPonuda, string dodatnaPojašnjenja,
+            int brojKlase, int urbroj)
+
+        {
+
+          
+            string sql = $"INSERT INTO Zahtjev ( Naziv, IdPodnositelja, VrijemeKreiranja, IdFinanciranja, Opis, PonuditeljPrvi, CijenaBezPrvi, CijenaPdvPrvi, PonudaPrvaOdobrena, PonuditeljDva, CijenaBezDva, CijenaPdvDva, PonudaDvaOdobrena, DodatnaPojašnjenja, BrojKlase, Urbroj) VALUES ('{naziv.ToString()}', {korisnik.Id}, GETDATE(), {izvor.Id+1}, '{opis.ToString()}', '{ponuditeljPrvi.ToString()}', {cijenaBezPrvi.ToString()}, {cijenaPrvi}, '{prvaPonuda}', '{ponuditeljDva.ToString()}', {cijenaBezDva}, {cijenaDva}, '{drugaPonuda}', '{dodatnaPojašnjenja.ToString()}', {brojKlase}, {urbroj})";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+
+     
+        }
+
+
+       
+         }
     }
-}
+

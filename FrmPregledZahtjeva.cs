@@ -28,5 +28,18 @@ namespace ATECH
             var zahtjevi = ZahtjevRepository.DohvatiZahtjeve();
             dgvZahtjevi.DataSource = zahtjevi;
         }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            FrmPočetna frmPočetna = new FrmPočetna();
+            Hide();
+            frmPočetna.ShowDialog();
+            Close();
+        }
+
+        private void dgvZahtjevi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

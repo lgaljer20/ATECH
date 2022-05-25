@@ -33,9 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.labelKreirajZahtjev = new System.Windows.Forms.Label();
-            this.dgvKorisnik = new System.Windows.Forms.DataGridView();
             this.labelPregledajZahtjeve = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnik)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -57,7 +55,7 @@
             this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Početna stranica";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // imageList1
             // 
@@ -76,14 +74,6 @@
             this.labelKreirajZahtjev.TabIndex = 2;
             this.labelKreirajZahtjev.Text = "Kreiraj zahtjev";
             this.labelKreirajZahtjev.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // dgvKorisnik
-            // 
-            this.dgvKorisnik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKorisnik.Location = new System.Drawing.Point(118, 107);
-            this.dgvKorisnik.Name = "dgvKorisnik";
-            this.dgvKorisnik.Size = new System.Drawing.Size(670, 219);
-            this.dgvKorisnik.TabIndex = 3;
             // 
             // labelPregledajZahtjeve
             // 
@@ -104,14 +94,12 @@
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelPregledajZahtjeve);
-            this.Controls.Add(this.dgvKorisnik);
             this.Controls.Add(this.labelKreirajZahtjev);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.treeView1);
             this.Name = "FrmPočetna";
             this.Text = "ATECH";
             this.Load += new System.EventHandler(this.FrmPočetna_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnik)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,7 +111,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label labelKreirajZahtjev;
-        private System.Windows.Forms.DataGridView dgvKorisnik;
         private System.Windows.Forms.Label labelPregledajZahtjeve;
     }
 }

@@ -44,7 +44,7 @@
             this.label1.Size = new System.Drawing.Size(114, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Korisničko ime:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLogin
             // 
@@ -81,7 +81,7 @@
             this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Lozinka:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // FrmLogin
             // 

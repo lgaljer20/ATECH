@@ -58,26 +58,6 @@ namespace ATECH.Repositories
             return korisnici;
         }
 
-
-
-        // DB.SetConfiguration("lgaljer20_DB", "lgaljer20", ")lA00rOP")
-        /*  public static Korisnik DohvatiKorisnika(int id)
-          {
-              Korisnik korisnik = null;
-              string sql = $"SELECT * FROM Korisnik WHERE Id = {id}";
-              DB.OpenConnection();
-              var reader = DB.GetDataReader(sql);
-              if (reader.HasRows)
-              {
-                  reader.Read();
-                  korisnik = CreateObject(reader);
-                  reader.Close();
-              }
-
-              DB.CloseConnection();
-              return korisnik;
-          }
-        */
         private static Korisnik CreateObject(System.Data.SqlClient.SqlDataReader reader)
         {
             int id = int.Parse(reader["Id"].ToString());
