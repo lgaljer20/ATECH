@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAžurirajZahtjev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAžurirajZahtjev.Designer.cs">
+      <DependentUpon>FrmAžurirajZahtjev.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmKreirajZahtjev.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Repositories\IzvoriFinanciranjaRepository.cs" />
     <Compile Include="Repositories\KorisnikRepository.cs" />
     <Compile Include="Repositories\ZahtjevRepository.cs" />
+    <EmbeddedResource Include="FrmAžurirajZahtjev.resx">
+      <DependentUpon>FrmAžurirajZahtjev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmKreirajZahtjev.resx">
       <DependentUpon>FrmKreirajZahtjev.cs</DependentUpon>
     </EmbeddedResource>

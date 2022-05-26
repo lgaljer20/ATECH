@@ -55,6 +55,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Ažuriraj";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 

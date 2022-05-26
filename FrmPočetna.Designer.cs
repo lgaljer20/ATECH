@@ -36,6 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pbx1 = new System.Windows.Forms.PictureBox();
+            this.labelOdjava = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbx1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             this.labelKreirajZahtjev.Size = new System.Drawing.Size(98, 47);
             this.labelKreirajZahtjev.TabIndex = 2;
             this.labelKreirajZahtjev.Text = "Kreiraj zahtjev";
+            this.labelKreirajZahtjev.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelKreirajZahtjev.Click += new System.EventHandler(this.label2_Click);
             // 
             // labelPregledajZahtjeve
@@ -59,6 +61,7 @@
             this.labelPregledajZahtjeve.Size = new System.Drawing.Size(98, 47);
             this.labelPregledajZahtjeve.TabIndex = 4;
             this.labelPregledajZahtjeve.Text = "Pregledaj zahtjeve";
+            this.labelPregledajZahtjeve.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelPregledajZahtjeve.Click += new System.EventHandler(this.labelPregledajZahtjeve_Click);
             // 
             // label2
@@ -90,7 +93,7 @@
             this.label3.Size = new System.Drawing.Size(101, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "Ime";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -101,7 +104,7 @@
             this.label4.Size = new System.Drawing.Size(82, 18);
             this.label4.TabIndex = 8;
             this.label4.Text = "Prezime";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -120,12 +123,25 @@
             this.pbx1.TabIndex = 10;
             this.pbx1.TabStop = false;
             // 
+            // labelOdjava
+            // 
+            this.labelOdjava.BackColor = System.Drawing.Color.White;
+            this.labelOdjava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelOdjava.Location = new System.Drawing.Point(12, 259);
+            this.labelOdjava.Name = "labelOdjava";
+            this.labelOdjava.Size = new System.Drawing.Size(98, 47);
+            this.labelOdjava.TabIndex = 11;
+            this.labelOdjava.Text = "Odjavi se";
+            this.labelOdjava.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelOdjava.Click += new System.EventHandler(this.labelOdjava_Click);
+            // 
             // FrmPočetna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelOdjava);
             this.Controls.Add(this.pbx1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -152,6 +168,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pbx1;
+        private System.Windows.Forms.Label labelOdjava;
     }
 }
 

@@ -109,13 +109,32 @@ namespace ATECH.Repositories
 
         {
 
+          //  izvor.Id += 1;
           
-            string sql = $"INSERT INTO Zahtjev ( Naziv, IdPodnositelja, VrijemeKreiranja, IdFinanciranja, Opis, PonuditeljPrvi, CijenaBezPrvi, CijenaPdvPrvi, PonudaPrvaOdobrena, PonuditeljDva, CijenaBezDva, CijenaPdvDva, PonudaDvaOdobrena, DodatnaPojašnjenja, BrojKlase, Urbroj) VALUES ('{naziv.ToString()}', {korisnik.Id}, GETDATE(), {izvor.Id+1}, '{opis.ToString()}', '{ponuditeljPrvi.ToString()}', {cijenaBezPrvi.ToString()}, {cijenaPrvi}, '{prvaPonuda}', '{ponuditeljDva.ToString()}', {cijenaBezDva}, {cijenaDva}, '{drugaPonuda}', '{dodatnaPojašnjenja.ToString()}', {brojKlase}, {urbroj})";
+            string sql = $"INSERT INTO Zahtjev ( Naziv, IdPodnositelja, VrijemeKreiranja, IdFinanciranja, Opis, PonuditeljPrvi," +
+                $" CijenaBezPrvi, CijenaPdvPrvi, PonudaPrvaOdobrena, PonuditeljDva, CijenaBezDva, CijenaPdvDva, PonudaDvaOdobrena," +
+                $" DodatnaPojašnjenja, BrojKlase, Urbroj) VALUES ('{naziv}', {korisnik.Id}, GETDATE(), {izvor.Id+1}, '{opis}', " +
+                $"'{ponuditeljPrvi}', {cijenaBezPrvi}, {cijenaPrvi}, '{prvaPonuda}', '{ponuditeljDva}', {cijenaBezDva}, {cijenaDva}," +
+                $" '{drugaPonuda}', '{dodatnaPojašnjenja}', {brojKlase}, {urbroj})";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
 
      
+        }
+
+        public static void AžurirajZahtjev(string naziv,  IzvoriFinanciranja izvor, string opis, string ponuditeljPrvi,
+            float cijenaBezPrvi, float cijenaPrvi, bool prvaPonuda, string ponuditeljDva, float cijenaBezDva, float cijenaDva, bool drugaPonuda, string dodatnaPojašnjenja,
+            int brojKlase, int urbroj)
+        {
+            
+            string sql = $"UPDATE Zahtjev SET Naziv = '{naziv}',  IdFinanciranja = {izvor.Id+1}, Opis = '{opis}', PonuditeljPrvi = '{ponuditeljPrvi}'," +
+                $"CijenaBezPrvi ={cijenaBezPrvi}, CijenaPdvPrvi ={cijenaPrvi}, PonudaPrvaOdobrena = {prvaPonuda}, PonuditeljDva  = '{ponuditeljDva}', CijenaBezDva = {cijenaBezDva}," +
+                $"CijenaPdvDva = {cijenaDva}, PonudaDvaOdobrena = {drugaPonuda}, DodatnaPojašnjenja = '{dodatnaPojašnjenja}', BrojKlase = {brojKlase}, Urbroj = {urbroj}";
+
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
         }
 
 

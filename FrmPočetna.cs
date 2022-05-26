@@ -41,10 +41,7 @@ namespace ATECH
             Close();
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
 
-        }
 
         private void labelPregledajZahtjeve_Click(object sender, EventArgs e)
         {
@@ -54,14 +51,12 @@ namespace ATECH
             Close();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void labelOdjava_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            FrmLogin frmPrijava = new FrmLogin();
+            Hide();
+            frmPrijava.ShowDialog();
+            Close();
         }
     }
 }

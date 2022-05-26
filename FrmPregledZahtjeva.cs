@@ -1,4 +1,5 @@
-﻿using ATECH.Repositories;
+﻿using ATECH.Models;
+using ATECH.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,6 +40,14 @@ namespace ATECH
 
         private void dgvZahtjevi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Zahtjev stisnutiZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
+            FrmAžurirajZahtjev frmAžuriraniZahtjev = new FrmAžurirajZahtjev(stisnutiZahtjev);
+            frmAžuriraniZahtjev.ShowDialog();
 
         }
     }

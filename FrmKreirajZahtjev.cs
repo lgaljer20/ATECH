@@ -53,7 +53,29 @@ namespace ATECH
             string naziv = txtNaziv.Text;
             var korisnik = FrmLogin.PrijavljenKorisnik;
             DateTime vrijeme = DateTime.Now;
-            var izvor = cboIzvoriFinanciranja.SelectedItem as IzvoriFinanciranja;
+            var izvor = cboIzvoriFinanciranja.SelectedItem as IzvoriFinanciranja; //izvor++ bi trebalo nekak
+            
+            //int id;
+            //bool result = int.TryParse(izvor.SelectedValue.ToString(), out id);
+
+            //try
+            //{
+            //    string name = cboIzvoriFinanciranja.SelectedItem.ToString();
+            //    int portBaudrate = Convert.ToInt32(cboIzvoriFinanciranja.SelectedItem as IzvoriFinanciranja);
+            //}
+            //catch
+            //{
+
+            //}
+
+            //izvor = portBaudrate;
+            //int x = 0;
+            //if (cboIzvoriFinanciranja.SelectedItem as IzvoriFinanciranja != null)
+            //{
+            //    x = int.Parse(cboIzvoriFinanciranja.SelectedItem.ToString());
+            //}
+            //x+= 1;
+
             String opis = txtOpis.Text;
             String ponuditeljPrvi = txtPonuditelj1.Text;
             Boolean ponuda1 = checkBox1.Checked;
@@ -83,8 +105,8 @@ namespace ATECH
             int urbroj;
             bool valid6 = int.TryParse(txtUrbroj.Text, out urbroj);
 
-            
-      
+
+
 
 
 
