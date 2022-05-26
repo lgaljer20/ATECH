@@ -43,7 +43,7 @@
             this.dgvZahtjevi.Name = "dgvZahtjevi";
             this.dgvZahtjevi.Size = new System.Drawing.Size(1045, 546);
             this.dgvZahtjevi.TabIndex = 0;
-            this.dgvZahtjevi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvZahtjevi_CellContentClick);
+            //this.dgvZahtjevi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvZahtjevi_CellContentClick);
             // 
             // btnUpdate
             // 
@@ -67,6 +67,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Izbriši";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnGoBack
             // 

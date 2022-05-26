@@ -19,11 +19,8 @@ namespace ATECH
             InitializeComponent();
         }
 
-   
         private void FrmKreirajZahtjev_Load(object sender, EventArgs e)
         {
-
-            
             txtVrijeme.Text = DateTime.Now.ToString();
             txtKorisnik.Text = FrmLogin.PrijavljenKorisnik.ToString();
             var izvori = IzvoriFinanciranjaRepository.DohvatiIzvore();
@@ -53,28 +50,8 @@ namespace ATECH
             string naziv = txtNaziv.Text;
             var korisnik = FrmLogin.PrijavljenKorisnik;
             DateTime vrijeme = DateTime.Now;
-            var izvor = cboIzvoriFinanciranja.SelectedItem as IzvoriFinanciranja; //izvor++ bi trebalo nekak
-            
-            //int id;
-            //bool result = int.TryParse(izvor.SelectedValue.ToString(), out id);
-
-            //try
-            //{
-            //    string name = cboIzvoriFinanciranja.SelectedItem.ToString();
-            //    int portBaudrate = Convert.ToInt32(cboIzvoriFinanciranja.SelectedItem as IzvoriFinanciranja);
-            //}
-            //catch
-            //{
-
-            //}
-
-            //izvor = portBaudrate;
-            //int x = 0;
-            //if (cboIzvoriFinanciranja.SelectedItem as IzvoriFinanciranja != null)
-            //{
-            //    x = int.Parse(cboIzvoriFinanciranja.SelectedItem.ToString());
-            //}
-            //x+= 1;
+            var izvor = cboIzvoriFinanciranja.SelectedItem as IzvoriFinanciranja; 
+       
 
             String opis = txtOpis.Text;
             String ponuditeljPrvi = txtPonuditelj1.Text;
@@ -104,14 +81,10 @@ namespace ATECH
             bool valid5 = int.TryParse(txtKlasa.Text, out brojKlase);
             int urbroj;
             bool valid6 = int.TryParse(txtUrbroj.Text, out urbroj);
-
-
-
-
-
-
-            ZahtjevRepository.KreirajZahtjev(naziv, korisnik, vrijeme, izvor, opis, ponuditeljPrvi, cijenaBezPrvi, cijenaPdvPrvi, ponuda1, ponuditeljDva, cijenaBezDva, cijenaPdvDva, ponuda2, dodatnaPojašnjenja, brojKlase, urbroj);
-
+       
+            ZahtjevRepository.KreirajZahtjev(naziv, korisnik, vrijeme, izvor, opis, ponuditeljPrvi,
+                cijenaBezPrvi, cijenaPdvPrvi, ponuda1, ponuditeljDva, cijenaBezDva, cijenaPdvDva,
+                ponuda2, dodatnaPojašnjenja, brojKlase, urbroj);
             PokreniPočetnu();
 
         }

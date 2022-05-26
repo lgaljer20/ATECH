@@ -27,6 +27,8 @@ namespace ATECH.Repositories
             return zahtjev;
         }
 
+        //fja dohvatiId preko stringa
+
         public static List<Zahtjev> DohvatiZahtjeve()
         {
             List<Zahtjev> zahtjevi = new List<Zahtjev>();
@@ -34,7 +36,7 @@ namespace ATECH.Repositories
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
 
-            while(reader.Read())
+            while (reader.Read())
             {
                 Zahtjev zahtjev = CreateObject(reader);
                 zahtjevi.Add(zahtjev);
@@ -66,7 +68,7 @@ namespace ATECH.Repositories
             float cijenaPdvPrvi = float.Parse(reader["CijenaPdvPrvi"].ToString());
             bool ponudaPrvaOdobrena = reader["PonudaPrvaOdobrena"] as bool? ?? false;
 
-    
+
 
             string ponuditeljDva = reader["PonuditeljDva"].ToString();
             float cijenaBezDva = float.Parse(reader["CijenaBezDva"].ToString());
@@ -75,7 +77,7 @@ namespace ATECH.Repositories
 
             string dodatnaPojašnjenja = reader["DodatnaPojašnjenja"].ToString();
             int brojKlase = int.Parse(reader["BrojKlase"].ToString());
-            int urbroj =int.Parse(reader["Urbroj"].ToString());
+            int urbroj = int.Parse(reader["Urbroj"].ToString());
 
             var zahtjev = new Zahtjev
             {
@@ -109,36 +111,41 @@ namespace ATECH.Repositories
 
         {
 
-          //  izvor.Id += 1;
-          
+            //  izvor.Id += 1;
+
             string sql = $"INSERT INTO Zahtjev ( Naziv, IdPodnositelja, VrijemeKreiranja, IdFinanciranja, Opis, PonuditeljPrvi," +
                 $" CijenaBezPrvi, CijenaPdvPrvi, PonudaPrvaOdobrena, PonuditeljDva, CijenaBezDva, CijenaPdvDva, PonudaDvaOdobrena," +
-                $" DodatnaPojašnjenja, BrojKlase, Urbroj) VALUES ('{naziv}', {korisnik.Id}, GETDATE(), {izvor.Id+1}, '{opis}', " +
+                $" DodatnaPojašnjenja, BrojKlase, Urbroj) VALUES ('{naziv}', {korisnik.Id}, GETDATE(), {izvor.Id}, '{opis}', " +
                 $"'{ponuditeljPrvi}', {cijenaBezPrvi}, {cijenaPrvi}, '{prvaPonuda}', '{ponuditeljDva}', {cijenaBezDva}, {cijenaDva}," +
                 $" '{drugaPonuda}', '{dodatnaPojašnjenja}', {brojKlase}, {urbroj})";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
 
-     
+
         }
 
-        public static void AžurirajZahtjev(string naziv,  IzvoriFinanciranja izvor, string opis, string ponuditeljPrvi,
+        public static void AžurirajZahtjev(Zahtjev zahtjev, string naziv, IzvoriFinanciranja izvor, string opis, string ponuditeljPrvi,
             float cijenaBezPrvi, float cijenaPrvi, bool prvaPonuda, string ponuditeljDva, float cijenaBezDva, float cijenaDva, bool drugaPonuda, string dodatnaPojašnjenja,
             int brojKlase, int urbroj)
         {
-            
-            string sql = $"UPDATE Zahtjev SET Naziv = '{naziv}',  IdFinanciranja = {izvor.Id+1}, Opis = '{opis}', PonuditeljPrvi = '{ponuditeljPrvi}'," +
-                $"CijenaBezPrvi ={cijenaBezPrvi}, CijenaPdvPrvi ={cijenaPrvi}, PonudaPrvaOdobrena = {prvaPonuda}, PonuditeljDva  = '{ponuditeljDva}', CijenaBezDva = {cijenaBezDva}," +
-                $"CijenaPdvDva = {cijenaDva}, PonudaDvaOdobrena = {drugaPonuda}, DodatnaPojašnjenja = '{dodatnaPojašnjenja}', BrojKlase = {brojKlase}, Urbroj = {urbroj}";
+
+            string sql = $"UPDATE Zahtjev SET Naziv = '{naziv}',  IdFinanciranja = {izvor.Id}, Opis = '{opis}', PonuditeljPrvi = '{ponuditeljPrvi}'," +
+                $"CijenaBezPrvi ={cijenaBezPrvi}, CijenaPdvPrvi ={cijenaPrvi}, PonudaPrvaOdobrena = '{prvaPonuda}', PonuditeljDva  = '{ponuditeljDva}', CijenaBezDva = {cijenaBezDva}," +
+                $"CijenaPdvDva = {cijenaDva}, PonudaDvaOdobrena = '{drugaPonuda}', DodatnaPojašnjenja = '{dodatnaPojašnjenja}', BrojKlase = {brojKlase}, Urbroj = {urbroj} WHERE Id = '{zahtjev.Id}'";
 
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
         }
 
-
-       
-         }
+        public static void IzbrišiZahtjev(Zahtjev zahtjev)
+        {
+            string sql = $"DELETE FROM Zahtjev WHERE Id = '{zahtjev.Id}'";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
     }
+}
 

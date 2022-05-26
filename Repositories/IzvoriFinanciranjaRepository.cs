@@ -13,7 +13,7 @@ namespace ATECH.Repositories
         public static IzvoriFinanciranja DohvatiIzvor(int id)
         {
             IzvoriFinanciranja izvor = null;
-            string sql = $"SELECT IzvorFinanciranja FROM IzvoriFinanciranja WHERE Id = {id}";
+            string sql = $"SELECT * FROM IzvoriFinanciranja WHERE Id = {id}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows)
@@ -30,7 +30,7 @@ namespace ATECH.Repositories
         public static List<IzvoriFinanciranja> DohvatiIzvore()
         {
             List<IzvoriFinanciranja> izvori = new List<IzvoriFinanciranja>();
-            string sql = "SELECT IzvorFinanciranja FROM IzvoriFinanciranja";
+            string sql = "SELECT * FROM IzvoriFinanciranja";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
@@ -45,13 +45,14 @@ namespace ATECH.Repositories
 
         private static IzvoriFinanciranja CreateObject(System.Data.SqlClient.SqlDataReader reader)
         {
-            // int id = int.Parse(reader["Id"].ToString());
+
+            int id = int.Parse(reader["Id"].ToString());
             string izvorFinanciranja = reader["IzvorFinanciranja"].ToString();
 
 
             var izvor = new IzvoriFinanciranja
             {
-                // Id = id,
+                Id = id,
                 IzvorFinanciranja = izvorFinanciranja
             };
 

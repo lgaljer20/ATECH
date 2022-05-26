@@ -83,7 +83,6 @@
             this.label2.Size = new System.Drawing.Size(143, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Naziv univerzalnog zahtjeva:";
-            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtKorisnik
             // 
@@ -116,7 +115,6 @@
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Urbroj:";
-            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtKlasa
             // 
@@ -149,7 +147,6 @@
             this.label6.Size = new System.Drawing.Size(87, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "Vrijeme kreiranja:";
-            //this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtVrijeme
             // 
@@ -165,7 +162,6 @@
             this.txtOpis.Name = "txtOpis";
             this.txtOpis.Size = new System.Drawing.Size(313, 123);
             this.txtOpis.TabIndex = 11;
-            //this.txtOpis.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label7
             // 
@@ -193,7 +189,6 @@
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 14;
             this.label9.Text = "Ponuditelj:";
-            //this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -325,7 +320,6 @@
             this.txtDodatno.Name = "txtDodatno";
             this.txtDodatno.Size = new System.Drawing.Size(313, 123);
             this.txtDodatno.TabIndex = 33;
-            //this.txtDodatno.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // label18
             // 
@@ -335,7 +329,6 @@
             this.label18.Size = new System.Drawing.Size(107, 13);
             this.label18.TabIndex = 32;
             this.label18.Text = "Dodatna pojašnjenja:";
-            //this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // btnKreirajZahtjev
             // 

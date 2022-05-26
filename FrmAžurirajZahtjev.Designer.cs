@@ -93,6 +93,7 @@
             this.btnAžurirajZahtjev.TabIndex = 70;
             this.btnAžurirajZahtjev.Text = "Ažuriraj";
             this.btnAžurirajZahtjev.UseVisualStyleBackColor = false;
+            this.btnAžurirajZahtjev.Click += new System.EventHandler(this.btnAžurirajZahtjev_Click);
             // 
             // txtDodatno
             // 

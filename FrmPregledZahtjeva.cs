@@ -38,17 +38,18 @@ namespace ATECH
             Close();
         }
 
-        private void dgvZahtjevi_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Zahtjev stisnutiZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             FrmAžurirajZahtjev frmAžuriraniZahtjev = new FrmAžurirajZahtjev(stisnutiZahtjev);
             frmAžuriraniZahtjev.ShowDialog();
+        }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Zahtjev zahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
+            ZahtjevRepository.IzbrišiZahtjev(zahtjev);
+            PrikaziZahtjeve();
         }
     }
 }
