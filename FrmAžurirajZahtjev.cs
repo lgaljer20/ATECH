@@ -27,8 +27,6 @@ namespace ATECH
 
         private void FrmAžurirajZahtjev_Load(object sender, EventArgs e)
         {
-            
-
             txtNaziv.Text = StisnutiZahtjev.Naziv;
             txtKorisnik.Text = StisnutiZahtjev.IdPodnositelja.ToString();
             txtKlasa.Text = StisnutiZahtjev.BrojKlase.ToString();
@@ -51,50 +49,13 @@ namespace ATECH
             cboIzvoriFinanciranja.Text = StisnutiZahtjev.IdFinanciranja.ToString();
             txtVrijeme.Text = StisnutiZahtjev.VrijemeKreiranja.ToString();
 
-            
-            //var korisnik = FrmLogin.PrijavljenKorisnik;
-            //DateTime vrijeme = DateTime.Now;
-            //var izvor = cboIzvoriFinanciranja.SelectedItem as IzvoriFinanciranja;
-            //String opis = txtOpis.Text;
-            //String ponuditeljPrvi = txtPonuditelj1.Text;
-            //Boolean ponuda1 = checkBox1.Checked;
-            //Boolean ponuda2 = checkBox2.Checked;
-
-            //float cijenaBezPrvi;
-            //bool valid = float.TryParse(txtCijenaBez1.Text, out cijenaBezPrvi);
-
-            //float cijenaPdvPrvi;
-            //bool valid2 = float.TryParse(txtCijena1.Text, out cijenaPdvPrvi);
-
-
-            //string ponuditeljDva = txtPonuditelj2.Text;
-
-
-            //float cijenaBezDva;
-            //bool valid3 = float.TryParse(txtCijenaBez2.Text, out cijenaBezDva);
-
-
-            //float cijenaPdvDva;
-            //bool valid4 = float.TryParse(txtCijena2.Text, out cijenaPdvDva);
-
-            //string dodatnaPojašnjenja = txtDodatno.Text;
-
-            //int brojKlase;
-            //bool valid5 = int.TryParse(txtKlasa.Text, out brojKlase);
-            //int urbroj;
-            //bool valid6 = int.TryParse(txtUrbroj.Text, out urbroj);
+    
             var izvori = IzvoriFinanciranjaRepository.DohvatiIzvore();
             cboIzvoriFinanciranja.DataSource = izvori;
 
         }
 
-        //private void cboIzvoriFinanciranja_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    var izvor = cboIzvoriFinanciranja.SelectedItem as IzvoriFinanciranja;
-        //}
 
-
-      
 
         private void PokreniPregledZahtjeva()
         {
