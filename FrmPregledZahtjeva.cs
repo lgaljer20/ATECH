@@ -1,5 +1,6 @@
 ﻿using ATECH.Models;
 using ATECH.Repositories;
+using DBLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,8 +28,27 @@ namespace ATECH
         private void PrikaziZahtjeve()
         {
             var zahtjevi = ZahtjevRepository.DohvatiZahtjeve();
+            dgvZahtjevi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dgvZahtjevi.DataSource = zahtjevi;
+            dgvZahtjevi.Columns[0].HeaderText = "Redni broj zahtjeva";
+            dgvZahtjevi.Columns[1].HeaderText = "Naziv zahtjeva";
+            dgvZahtjevi.Columns[2].HeaderText = "Naziv podnositelja zahtjeva";
+            dgvZahtjevi.Columns[3].HeaderText = "Vrijeme kreiranja zahtjeva";
+            dgvZahtjevi.Columns[4].HeaderText = "Izvor financiranja";
+            dgvZahtjevi.Columns[5].HeaderText = "Opis zahtjeva";
+            dgvZahtjevi.Columns[6].HeaderText = "Prvi ponuditelj";
+            dgvZahtjevi.Columns[7].HeaderText = "Cijena bez PDV-a";
+            dgvZahtjevi.Columns[8].HeaderText = "Cijena s PDV-om";
+            dgvZahtjevi.Columns[9].HeaderText = "Da li je ponuda odobrena?";
+            dgvZahtjevi.Columns[10].HeaderText = "Drugi ponuditelj";
+            dgvZahtjevi.Columns[11].HeaderText = "Cijena bez PDV-a";
+            dgvZahtjevi.Columns[12].HeaderText = "Cijena s PDV-om";
+            dgvZahtjevi.Columns[13].HeaderText = "Da li je ponuda odobrena?";
+            dgvZahtjevi.Columns[14].HeaderText = "Dodatna pojašnjenja";
+            dgvZahtjevi.Columns[15].HeaderText = "Broj klase";
+            dgvZahtjevi.Columns[16].HeaderText = "Urbroj";
         }
+        
 
         private void btnGoBack_Click(object sender, EventArgs e)
         {
@@ -51,5 +71,33 @@ namespace ATECH
             ZahtjevRepository.IzbrišiZahtjev(zahtjev);
             PrikaziZahtjeve();
         }
+
+        private void txtPretraži_TextChanged(object sender, EventArgs e)
+        {
+            var zahtjeviPonuditelj = ZahtjevRepository.PretražiZahtjevPonuditelj(txtPonuditelj.Text);
+            dgvZahtjevi.DataSource = zahtjeviPonuditelj;
+
+        }
+
+        private void txtNazivZahtjeva_TextChanged(object sender, EventArgs e)
+        {
+            var zahtjeviNaziv = ZahtjevRepository.PretražiNazivZahtjeva(txtNazivZahtjeva.Text);
+            dgvZahtjevi.DataSource = zahtjeviNaziv;
+        }
+
+        private void dgvZahtjevi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+
+        //private void txtIzvor_TextChanged(object sender, EventArgs e)
+        //{
+        //    var zahtjeviIzvor = IzvoriFinanciranjaRepository.DohvatiIzvorNaziv(txtIzvor.Text) ;
+
+        //    var izvori = ZahtjevRepository.PretražiIzvorZahtjeva(zahtjeviIzvor)
+        //    dgvZahtjevi.DataSource = zahtjeviIzvor;
+        //}
     }
 }

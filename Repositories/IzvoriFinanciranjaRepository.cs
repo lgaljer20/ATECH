@@ -27,6 +27,24 @@ namespace ATECH.Repositories
             return izvor;
         }
 
+        //public static IzvoriFinanciranja DohvatiIzvorNaziv(string text)
+        //{
+        //    //like '" + text + "%'
+        //    IzvoriFinanciranja izvor = null;
+        //    string sql = $"SELECT * FROM IzvoriFinanciranja WHERE IzvorFinanciranja like '" + text + "%'";
+        //    DB.OpenConnection();
+        //    var reader = DB.GetDataReader(sql);
+        //    if (reader.HasRows)
+        //    {
+        //        reader.Read();
+        //        izvor = CreateObject(reader);
+        //        reader.Close();
+        //    }
+
+        //    DB.CloseConnection();
+        //    return izvor;
+        //}
+
         public static List<IzvoriFinanciranja> DohvatiIzvore()
         {
             List<IzvoriFinanciranja> izvori = new List<IzvoriFinanciranja>();
