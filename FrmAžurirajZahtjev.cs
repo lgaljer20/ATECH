@@ -109,6 +109,7 @@ namespace ATECH
             ZahtjevRepository.AžurirajZahtjev(zahtjev, naziv, izvor, opis, ponuditeljPrvi, cijenaBezPrvi, cijenaPdvPrvi, ponuda1, ponuditeljDva, cijenaBezDva, cijenaPdvDva,
                 ponuda2, dodatnaPojašnjenja, brojKlase, urbroj);
 
+            Close();
             PokreniPregledZahtjeva();
         }
     }

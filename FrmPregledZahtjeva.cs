@@ -62,7 +62,11 @@ namespace ATECH
         {
             Zahtjev stisnutiZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             FrmAžurirajZahtjev frmAžuriraniZahtjev = new FrmAžurirajZahtjev(stisnutiZahtjev);
+
+            Hide();
             frmAžuriraniZahtjev.ShowDialog();
+            Close();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -70,6 +74,7 @@ namespace ATECH
             Zahtjev zahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             ZahtjevRepository.IzbrišiZahtjev(zahtjev);
             PrikaziZahtjeve();
+            
         }
 
         private void txtPretraži_TextChanged(object sender, EventArgs e)
