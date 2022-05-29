@@ -76,8 +76,8 @@ namespace ATECH
 
             String opis = txtOpis.Text;
             String ponuditeljPrvi = txtPonuditelj1.Text;
-            Boolean ponuda1 = checkBox1.Checked;
-            Boolean ponuda2 = checkBox2.Checked;
+            Boolean ponuda1 = checkBox2.Checked;
+            Boolean ponuda2 = checkBox1.Checked;
 
             float cijenaBezPrvi;
             bool valid = float.TryParse(txtCijenaBez1.Text, out cijenaBezPrvi);
@@ -112,5 +112,44 @@ namespace ATECH
             Close();
             PokreniPregledZahtjeva();
         }
+
+        private void txtCijenaBez1_TextChanged_1(object sender, EventArgs e)
+        {
+            float cijenaBezPrvi;
+            bool valid = float.TryParse(txtCijenaBez1.Text, out cijenaBezPrvi);
+            float pdv = 1.25f;
+            float cijenaPdv = cijenaBezPrvi * pdv;
+            txtCijena1.Text = cijenaPdv.ToString();
+
+        }
+
+        private void txtCijena1_TextChanged_1(object sender, EventArgs e)
+        {
+            float pdv = 1.25f;
+            float cijenaPdvPrvi;
+            bool valid2 = float.TryParse(txtCijena1.Text, out cijenaPdvPrvi);
+            float cijenaBez = cijenaPdvPrvi / pdv;
+            txtCijenaBez1.Text = cijenaBez.ToString();
+        }
+
+        private void txtCijenaBez2_TextChanged_1(object sender, EventArgs e)
+        {
+            float cijenaBezDva;
+            bool valid = float.TryParse(txtCijenaBez2.Text, out cijenaBezDva);
+            float pdv = 1.25f;
+            float cijenaPdv = cijenaBezDva * pdv;
+            txtCijena2.Text = cijenaPdv.ToString();
+        }
+
+        private void txtCijena2_TextChanged_1(object sender, EventArgs e)
+        {
+            float pdv = 1.25f;
+            float cijenaPdvDva;
+            bool valid2 = float.TryParse(txtCijena2.Text, out cijenaPdvDva);
+            float cijenaBez = cijenaPdvDva / pdv;
+            txtCijenaBez2.Text = cijenaBez.ToString();
+        }
+
+     
     }
 }

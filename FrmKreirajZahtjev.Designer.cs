@@ -89,7 +89,7 @@
             // txtKorisnik
             // 
             this.txtKorisnik.Location = new System.Drawing.Point(268, 23);
-            this.txtKorisnik.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKorisnik.Margin = new System.Windows.Forms.Padding(4);
             this.txtKorisnik.Name = "txtKorisnik";
             this.txtKorisnik.ReadOnly = true;
             this.txtKorisnik.Size = new System.Drawing.Size(164, 22);
@@ -98,7 +98,7 @@
             // txtNaziv
             // 
             this.txtNaziv.Location = new System.Drawing.Point(268, 81);
-            this.txtNaziv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNaziv.Margin = new System.Windows.Forms.Padding(4);
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.Size = new System.Drawing.Size(164, 22);
             this.txtNaziv.TabIndex = 3;
@@ -126,7 +126,7 @@
             // txtKlasa
             // 
             this.txtKlasa.Location = new System.Drawing.Point(737, 23);
-            this.txtKlasa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKlasa.Margin = new System.Windows.Forms.Padding(4);
             this.txtKlasa.Name = "txtKlasa";
             this.txtKlasa.Size = new System.Drawing.Size(104, 22);
             this.txtKlasa.TabIndex = 6;
@@ -134,7 +134,7 @@
             // txtUrbroj
             // 
             this.txtUrbroj.Location = new System.Drawing.Point(737, 78);
-            this.txtUrbroj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUrbroj.Margin = new System.Windows.Forms.Padding(4);
             this.txtUrbroj.Name = "txtUrbroj";
             this.txtUrbroj.Size = new System.Drawing.Size(104, 22);
             this.txtUrbroj.TabIndex = 7;
@@ -162,7 +162,7 @@
             // txtVrijeme
             // 
             this.txtVrijeme.Location = new System.Drawing.Point(789, 686);
-            this.txtVrijeme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVrijeme.Margin = new System.Windows.Forms.Padding(4);
             this.txtVrijeme.Name = "txtVrijeme";
             this.txtVrijeme.ReadOnly = true;
             this.txtVrijeme.Size = new System.Drawing.Size(132, 22);
@@ -171,7 +171,7 @@
             // txtOpis
             // 
             this.txtOpis.Location = new System.Drawing.Point(16, 183);
-            this.txtOpis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOpis.Margin = new System.Windows.Forms.Padding(4);
             this.txtOpis.Multiline = true;
             this.txtOpis.Name = "txtOpis";
             this.txtOpis.Size = new System.Drawing.Size(416, 150);
@@ -240,7 +240,7 @@
             // txtPonuditelj1
             // 
             this.txtPonuditelj1.Location = new System.Drawing.Point(212, 434);
-            this.txtPonuditelj1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPonuditelj1.Margin = new System.Windows.Forms.Padding(4);
             this.txtPonuditelj1.Name = "txtPonuditelj1";
             this.txtPonuditelj1.Size = new System.Drawing.Size(132, 22);
             this.txtPonuditelj1.TabIndex = 18;
@@ -248,39 +248,43 @@
             // txtCijenaBez1
             // 
             this.txtCijenaBez1.Location = new System.Drawing.Point(212, 492);
-            this.txtCijenaBez1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCijenaBez1.Margin = new System.Windows.Forms.Padding(4);
             this.txtCijenaBez1.Name = "txtCijenaBez1";
             this.txtCijenaBez1.Size = new System.Drawing.Size(132, 22);
             this.txtCijenaBez1.TabIndex = 19;
+            this.txtCijenaBez1.TextChanged += new System.EventHandler(this.txtCijenaBez1_TextChanged);
             // 
             // txtCijena1
             // 
             this.txtCijena1.Location = new System.Drawing.Point(212, 559);
-            this.txtCijena1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCijena1.Margin = new System.Windows.Forms.Padding(4);
             this.txtCijena1.Name = "txtCijena1";
             this.txtCijena1.Size = new System.Drawing.Size(132, 22);
             this.txtCijena1.TabIndex = 20;
+            this.txtCijena1.TextChanged += new System.EventHandler(this.txtCijena1_TextChanged);
             // 
             // txtCijena2
             // 
             this.txtCijena2.Location = new System.Drawing.Point(789, 559);
-            this.txtCijena2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCijena2.Margin = new System.Windows.Forms.Padding(4);
             this.txtCijena2.Name = "txtCijena2";
             this.txtCijena2.Size = new System.Drawing.Size(132, 22);
             this.txtCijena2.TabIndex = 28;
+            this.txtCijena2.TextChanged += new System.EventHandler(this.txtCijena2_TextChanged);
             // 
             // txtCijenaBez2
             // 
             this.txtCijenaBez2.Location = new System.Drawing.Point(789, 492);
-            this.txtCijenaBez2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCijenaBez2.Margin = new System.Windows.Forms.Padding(4);
             this.txtCijenaBez2.Name = "txtCijenaBez2";
             this.txtCijenaBez2.Size = new System.Drawing.Size(132, 22);
             this.txtCijenaBez2.TabIndex = 27;
+            this.txtCijenaBez2.TextChanged += new System.EventHandler(this.txtCijenaBez2_TextChanged);
             // 
             // txtPonuditelj2
             // 
             this.txtPonuditelj2.Location = new System.Drawing.Point(789, 434);
-            this.txtPonuditelj2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPonuditelj2.Margin = new System.Windows.Forms.Padding(4);
             this.txtPonuditelj2.Name = "txtPonuditelj2";
             this.txtPonuditelj2.Size = new System.Drawing.Size(132, 22);
             this.txtPonuditelj2.TabIndex = 26;
@@ -329,7 +333,7 @@
             // 
             this.cboIzvoriFinanciranja.FormattingEnabled = true;
             this.cboIzvoriFinanciranja.Location = new System.Drawing.Point(212, 689);
-            this.cboIzvoriFinanciranja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboIzvoriFinanciranja.Margin = new System.Windows.Forms.Padding(4);
             this.cboIzvoriFinanciranja.Name = "cboIzvoriFinanciranja";
             this.cboIzvoriFinanciranja.Size = new System.Drawing.Size(305, 24);
             this.cboIzvoriFinanciranja.TabIndex = 30;
@@ -348,7 +352,7 @@
             // txtDodatno
             // 
             this.txtDodatno.Location = new System.Drawing.Point(527, 183);
-            this.txtDodatno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDodatno.Margin = new System.Windows.Forms.Padding(4);
             this.txtDodatno.Multiline = true;
             this.txtDodatno.Name = "txtDodatno";
             this.txtDodatno.Size = new System.Drawing.Size(416, 150);
@@ -369,7 +373,7 @@
             this.btnKreirajZahtjev.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnKreirajZahtjev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKreirajZahtjev.Location = new System.Drawing.Point(823, 769);
-            this.btnKreirajZahtjev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKreirajZahtjev.Margin = new System.Windows.Forms.Padding(4);
             this.btnKreirajZahtjev.Name = "btnKreirajZahtjev";
             this.btnKreirajZahtjev.Size = new System.Drawing.Size(100, 28);
             this.btnKreirajZahtjev.TabIndex = 34;
@@ -382,7 +386,7 @@
             this.btnOdustani.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdustani.Location = new System.Drawing.Point(699, 769);
-            this.btnOdustani.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOdustani.Margin = new System.Windows.Forms.Padding(4);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(100, 28);
             this.btnOdustani.TabIndex = 35;
@@ -394,21 +398,23 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(789, 626);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 36;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(212, 628);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(18, 17);
             this.checkBox2.TabIndex = 37;
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // FrmKreirajZahtjev
             // 
@@ -452,7 +458,7 @@
             this.Controls.Add(this.txtKorisnik);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmKreirajZahtjev";
             this.Text = "Kreiranje univerzalnog zahtjeva";
             this.Load += new System.EventHandler(this.FrmKreirajZahtjev_Load);
