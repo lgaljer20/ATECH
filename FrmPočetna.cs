@@ -41,8 +41,6 @@ namespace ATECH
             Close();
         }
 
-
-
         private void labelPregledajZahtjeve_Click(object sender, EventArgs e)
         {
             FrmPregledZahtjeva frmPregledajZahtjev= new FrmPregledZahtjeva();

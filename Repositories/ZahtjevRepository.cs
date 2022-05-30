@@ -10,39 +10,7 @@ namespace ATECH.Repositories
 {
     public class ZahtjevRepository
     {
-        public static Zahtjev DohvatiZahtjev(Korisnik korisnik)
-        {
-            Zahtjev zahtjev = null;
-            string sql = $"SELECT * FROM Zahtjev WHERE IdPodnositelja = {korisnik.Id}";
-            DB.OpenConnection();
-            var reader = DB.GetDataReader(sql);
-            if (reader.HasRows)
-            {
-                reader.Read();
-                zahtjev = CreateObject(reader);
-                reader.Close();
-            }
 
-            DB.CloseConnection();
-            return zahtjev;
-        }
-
-        //public static IzvoriFinanciranja DohvatiZahtjevPremaIzvor(IzvoriFinanciranja izvor)
-        //{
-        //    IzvoriFinanciranja izvor = null;
-        //    string sql = $"SELECT IzvorFinanciranja FROM IzvoriFinanciranja WHERE Id = {izvor.Id}";
-        //    DB.OpenConnection();
-        //    var reader = DB.GetDataReader(sql);
-        //    if (reader.HasRows)
-        //    {
-        //        reader.Read();
-        //        zahtjev = CreateObject(reader);
-        //        reader.Close();
-        //    }
-
-        //    DB.CloseConnection();
-        //    return zahtjev;
-        //}
         public static List<Zahtjev> DohvatiZahtjeve()
         {
             List<Zahtjev> zahtjevi = new List<Zahtjev>();
@@ -192,46 +160,7 @@ namespace ATECH.Repositories
             return zahtjevi;
         }
 
-        //public static List<Zahtjev> PretražiIzvorZahtjeva(string text)
-        //{
-
-        //    List<Zahtjev> zahtjevi = new List<Zahtjev>();
-        //    string sql = "SELECT * FROM Zahtjev WHERE IdFinanciranja like '" + text + "%'";
-        //    DB.OpenConnection();
-        //    var reader = DB.GetDataReader(sql);
-
-        //    while (reader.Read())
-        //    {
-        //        Zahtjev zahtjev = CreateObject(reader);
-        //        zahtjevi.Add(zahtjev);
-        //    }
-
-        //    reader.Close();
-        //    DB.CloseConnection();
-
-        //    return zahtjevi;
-        //}
-
-
-        //public static List<Zahtjev> PretražiPodnositelja(string text)
-        //{
-
-        //    List<Zahtjev> zahtjevi = new List<Zahtjev>();
-        //    string sql = "SELECT * FROM Zahtjev WHERE IdPodnositelja like '" + text + "%'";
-        //    DB.OpenConnection();
-        //    var reader = DB.GetDataReader(sql);
-
-        //    while (reader.Read())
-        //    {
-        //        Zahtjev zahtjev = CreateObject(reader);
-        //        zahtjevi.Add(zahtjev);
-        //    }
-
-        //    reader.Close();
-        //    DB.CloseConnection();
-
-        //    return zahtjevi;
-        //}
+ 
     }
 
    }

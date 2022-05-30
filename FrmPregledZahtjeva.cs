@@ -88,21 +88,6 @@ namespace ATECH
         {
             var zahtjeviNaziv = ZahtjevRepository.PretražiNazivZahtjeva(txtNazivZahtjeva.Text);
             dgvZahtjevi.DataSource = zahtjeviNaziv;
-        }
-
-        private void dgvZahtjevi_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-
-        //private void txtIzvor_TextChanged(object sender, EventArgs e)
-        //{
-        //    var zahtjeviIzvor = IzvoriFinanciranjaRepository.DohvatiIzvorNaziv(txtIzvor.Text) ;
-
-        //    var izvori = ZahtjevRepository.PretražiIzvorZahtjeva(zahtjeviIzvor)
-        //    dgvZahtjevi.DataSource = zahtjeviIzvor;
-        //}
+        }   
     }
 }
