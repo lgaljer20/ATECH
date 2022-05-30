@@ -147,6 +147,9 @@ namespace ATECH
             txtCijenaBez2.Text = cijenaBez.ToString();
         }
 
-     
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            PokreniPregledZahtjeva();
+        }
     }
 }
