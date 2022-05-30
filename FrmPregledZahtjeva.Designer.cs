@@ -41,19 +41,19 @@
             // 
             // dgvZahtjevi
             // 
-            this.dgvZahtjevi.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.dgvZahtjevi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(78)))));
             this.dgvZahtjevi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvZahtjevi.Location = new System.Drawing.Point(15, 47);
             this.dgvZahtjevi.Name = "dgvZahtjevi";
             this.dgvZahtjevi.RowHeadersWidth = 51;
             this.dgvZahtjevi.Size = new System.Drawing.Size(1062, 511);
             this.dgvZahtjevi.TabIndex = 0;
-            //this.dgvZahtjevi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvZahtjevi_CellContentClick);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(78)))));
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(1002, 564);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
@@ -64,8 +64,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(78)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(921, 564);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
@@ -76,8 +77,9 @@
             // 
             // btnGoBack
             // 
-            this.btnGoBack.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnGoBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(78)))));
             this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoBack.ForeColor = System.Drawing.Color.White;
             this.btnGoBack.Location = new System.Drawing.Point(12, 564);
             this.btnGoBack.Name = "btnGoBack";
             this.btnGoBack.Size = new System.Drawing.Size(75, 23);
@@ -98,6 +100,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 13);
@@ -107,6 +110,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(342, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 13);
@@ -127,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSalmon;
+            this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(1087, 601);
             this.Controls.Add(this.txtNazivZahtjeva);
             this.Controls.Add(this.label2);

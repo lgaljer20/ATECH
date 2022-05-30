@@ -42,8 +42,9 @@
             // 
             // labelKreirajZahtjev
             // 
-            this.labelKreirajZahtjev.BackColor = System.Drawing.Color.White;
+            this.labelKreirajZahtjev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(78)))));
             this.labelKreirajZahtjev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelKreirajZahtjev.ForeColor = System.Drawing.Color.White;
             this.labelKreirajZahtjev.Location = new System.Drawing.Point(12, 123);
             this.labelKreirajZahtjev.Name = "labelKreirajZahtjev";
             this.labelKreirajZahtjev.Size = new System.Drawing.Size(98, 47);
@@ -54,8 +55,9 @@
             // 
             // labelPregledajZahtjeve
             // 
-            this.labelPregledajZahtjeve.BackColor = System.Drawing.Color.White;
+            this.labelPregledajZahtjeve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(78)))));
             this.labelPregledajZahtjeve.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelPregledajZahtjeve.ForeColor = System.Drawing.Color.White;
             this.labelPregledajZahtjeve.Location = new System.Drawing.Point(12, 190);
             this.labelPregledajZahtjeve.Name = "labelPregledajZahtjeve";
             this.labelPregledajZahtjeve.Size = new System.Drawing.Size(98, 47);
@@ -68,6 +70,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(296, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 20);
@@ -78,6 +81,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(553, 425);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(233, 16);
@@ -87,28 +91,29 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(9, 52);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "Ime";
-            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(56, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 18);
             this.label4.TabIndex = 8;
             this.label4.Text = "Prezime";
-            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(9, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 21);
@@ -125,8 +130,9 @@
             // 
             // labelOdjava
             // 
-            this.labelOdjava.BackColor = System.Drawing.Color.White;
+            this.labelOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(50)))), ((int)(((byte)(78)))));
             this.labelOdjava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelOdjava.ForeColor = System.Drawing.Color.White;
             this.labelOdjava.Location = new System.Drawing.Point(12, 259);
             this.labelOdjava.Name = "labelOdjava";
             this.labelOdjava.Size = new System.Drawing.Size(98, 47);
@@ -139,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelOdjava);
             this.Controls.Add(this.pbx1);
@@ -150,6 +156,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelPregledajZahtjeve);
             this.Controls.Add(this.labelKreirajZahtjev);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "FrmPočetna";
             this.Text = "ATECH";
             this.Load += new System.EventHandler(this.FrmPočetna_Load);
