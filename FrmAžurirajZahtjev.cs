@@ -54,9 +54,6 @@ namespace ATECH
             cboIzvoriFinanciranja.DataSource = izvori;
 
         }
-
-
-
         private void PokreniPregledZahtjeva()
         {
             FrmPregledZahtjeva frmPregled = new FrmPregledZahtjeva();

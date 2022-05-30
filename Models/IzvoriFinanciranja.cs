@@ -17,8 +17,5 @@ namespace ATECH.Models
             return IzvorFinanciranja;
         }
 
-     
-
-
     }
 }

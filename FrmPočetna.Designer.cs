@@ -76,6 +76,7 @@
             this.label2.Size = new System.Drawing.Size(174, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Dobrodošli u ATECH";
+            //this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label1
             // 
@@ -87,6 +88,7 @@
             this.label1.Size = new System.Drawing.Size(233, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Acquire technical equipment, est. 2022";
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
